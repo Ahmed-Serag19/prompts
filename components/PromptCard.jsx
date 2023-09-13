@@ -42,7 +42,7 @@ const PromptCard = ({
           onClick={handleProfileClick}
         >
           <Image
-            src={post.creator.image || '/assets/images/logo.svg'}
+            src={post?.creator?.image || '/assets/images/logo.svg'}
             alt="user_image"
             width={40}
             height={40}
@@ -62,11 +62,11 @@ const PromptCard = ({
         <div className="copy_btn" onClick={handleCopy}>
           <Image
             src={
-              copied === post.prompt
+              copied === post?.prompt
                 ? '/assets/icons/tick.svg'
                 : '/assets/icons/copy.svg'
             }
-            alt={copied === post.prompt ? 'tick_icon' : 'copy_icon'}
+            alt={copied === post?.prompt ? 'tick_icon' : 'copy_icon'}
             width={12}
             height={12}
           />
